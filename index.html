@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="museum price">
+    <meta name="keywords" content="day, age">
+    <meta name="author" content="devin-jhu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>museum price</title>
+  </head>
+  <body>
+    <p>museum price</p>
+    <p>Enter day of week and age to see if you get the discount pricing</p>
+    age:<input type="number" id="userage"><br>
+    day of the week:<input type="text" id="day"><br>
+    <button onclick="price()">find cost</button><br>
+    <script>
+      let tuesday;
+      let thursday;
+      let day;
+      let userage;
+      function price() {
+        userage=document.getElementById("userage").value;
+        day=document.getElementById("day").value;
+        if ((userage > 12 && userage < 21) ||(day=="tuesday" || day=="thursday")) {
+          alert ("you get the discount");
+        }
+        else   {
+          alert ("you do not get the discount");
+        }
+      }
+    </script>
+  </body>
+</html>
